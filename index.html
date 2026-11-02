@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Assignment #6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #gallery img {
+            width: 200px;      
+            height: 200px;       
+            object-fit: cover;   
+        }
+    </style>
+</head>
+<body class="bg-light text-dark p-4">
+
+    <div class="container" style="max-width: 800px;">
+        
+        <section id="profile-section" class="p-4 rounded bg-white shadow-sm mb-4">
+            <h1 id="main-title">Portfolio</h1>
+            <h3 id="user-name" class="text-primary">Serikbai Darkhan</h3>
+            <p id="headline" class="lead">Software Engineering</p>
+            <p id="intro">My Portfolio</p>
+
+            <div class="mt-3">
+                <button id="btn-update-headline" class="btn btn-outline-primary btn-sm">Update Headline</button>
+                <button id="btn-light-theme" class="btn btn-primary btn-sm">Light Theme</button>
+                <button id="btn-dark-theme" class="btn btn-primary btn-sm">Dark Theme</button>
+            </div>
+        </section>
+
+        <section class="p-4 rounded bg-white shadow-sm mb-4">
+            <h2>About Me</h2>
+            <div id="about-content">
+                <p><strong>Bio:</strong> 2nd year student of Astana IT University</p>
+                <p id="status-msg" class="text-success font-monospace">Learning WEB</p>
+                <ul>
+                    <li>Interested in 8-ball pool.</li>
+                    <li>Love playing Poker, bouling, table tennis.</li>
+                </ul>
+            </div>
+            <div>
+                <button id="btn-hide" class="btn btn-primary btn-sm">Hide Status</button>
+                <button id="btn-show" class="btn btn-primary btn-sm ">Show Status</button>
+                <button id="btn-toggle" class="btn btn-primary btn-sm">Toggle Status</button>
+            </div>
+        </section>
+
+        <section class="p-4 rounded bg-white shadow-sm mb-4">
+            <h2>Gallery</h2>
+            <div id="gallery" class="d-flex gap-3 mb-3">
+                <img src="picks/2026-11-02 16.34.28.jpg" id="img1" class="img-thumbnail" alt="Pic 1">
+                <img src="picks/images.jpeg" id="img2" class="img-thumbnail" alt="Pic 2">
+            </div>
+            <div>
+                <button id="btn-fade-out" class="btn btn-primary btn-sm">Fade Out</button>
+                <button id="btn-fade-in" class="btn btn-primary btn-sm">Fade In</button>
+                <button id="btn-fade-toggle" class="btn btn-primary btn-sm">Fade Toggle</button>
+            </div>
+        </section>
+
+        <section class="p-4 rounded bg-white shadow-sm mb-4">
+            <h2>My Favorites</h2>
+            
+            <div class="mb-2">
+                <h5 class="clickable-header text-primary" style="cursor: pointer;">My Favorite Music &#9660;</h5>
+                <div class="panel p-3 bg-light border rounded" style="display: none;">
+                    Latin pop, Salsa, Brazilian pagode.
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <h5 class="clickable-header text-primary" style="cursor: pointer;">My Favorite Movie &#9660;</h5>
+                <div class="panel p-3 bg-light border rounded" style="display: none;">
+                    Astral
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <h5 class="clickable-header text-primary" style="cursor: pointer;">My Favorite Subject &#9660;</h5>
+                <div class="panel p-3 bg-light border rounded" style="display: none;">
+                    Web development, SDP, DAA
+                </div>
+            </div>
+        </section>
+
+        <section class="p-4 rounded bg-white shadow-sm mb-4">
+            <h2>Technical Skills</h2>
+            
+            <ul id="skills-list" class="list-group mb-3">
+                <li class="list-group-item">GoLang</li>
+                <li class="list-group-item">JavaScript / HTML / CSS</li>
+                <li class="list-group-item">Git / GitHub</li>
+                <li class="list-group-item">SQL / Databases</li>
+            </ul>
+
+            <div class="input-group mb-3">
+                <input type="text" id="skill-input" class="form-control" placeholder="Enter a new skill">
+                <button id="btn-append-skill" class="btn btn-primary">Add Skill</button>
+                <button id="btn-prepend-skill" class="btn btn-outline-primary">Prepend Skill</button>
+                <button id="btn-remove-skill" class="btn btn-primary">Remove Skill</button>
+            </div>
+
+            <hr>
+
+            <h4>Skill Levels</h4>
+            <div class="mb-2">
+                <span>GoLang</span>
+                <div class="progress">
+                    <div id="bar-java" class="progress-bar bg-success skill-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="mb-2">
+                <span>JavaScript</span>
+                <div class="progress">
+                    <div id="bar-js" class="progress-bar bg-info skill-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <span>Git / GitHub</span>
+                <div class="progress">
+                    <div id="bar-git" class="progress-bar bg-warning skill-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <button id="btn-animate-skills" class="btn btn-primary">Animate My Skills</button>
+        </section>
+
+        <section class="p-4 rounded bg-white shadow-sm mb-4">
+            <h2>Social Link</h2>
+            <p>Visit my profile: <a id="social-link" href="https://www.instagram.com/darik_fmipr?rpxt=MTdoNWo5Y254NXdpOQ%3D%3D&utm_source=qr" target="_blank" class="fw-bold">Instagram</a></p>
+            <button id="btn-change-link" class="btn btn-outline-primary btn-sm">Change to GitHub</button>
+        </section>
+
+        <section class="p-4 rounded bg-white shadow-sm mb-4">
+            <h2>Form Live Preview</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="form-name" class="form-label">Name:</label>
+                    <input type="text" id="form-name" class="form-control" placeholder="Type your name">
+                </div>
+                <div class="mb-3">
+                    <label for="form-email" class="form-label">Email:</label>
+                    <input type="email" id="form-email" class="form-control" placeholder="Type your email">
+                </div>
+            </form>
+
+            <div class="p-3 bg-light border rounded">
+                <p class="mb-1"><strong>Live Name:</strong> <span id="live-name" class="text-primary">-</span></p>
+                <p class="mb-0"><strong>Live Email:</strong> <span id="live-email" class="text-primary">-</span></p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
